@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= heading %></title>
+  <link rel="stylesheet" href="/styles/main.css">
+  <script defer src="/scripts/main.js"></script>
+</head>
+<body class="light">
+  <%- include("partials/header") %>
+
+  <main class="container">
+    <h1><%= heading %></h1>
+
+    <% if (locals.post) { %>
+      <!-- Edit Post Form -->
+      <form method="post" action="/api/posts/<%= post.id %>">
+        <input type="text" name="title" value="<%= post.title %>" required>
+        <textarea name="content" rows="10" required><%= post.content %></textarea>
+        <input type="text" name="author" value="<%= post.author %>" required>
+        <button class="full-width" type="submit"><%= submit %></button>
+      </form>
+    <% } else { %>
+      <!-- New Post Form -->
+      <form method="post" action="/api/posts">
+        <input type="text" name="title" placeholder="Title" required>
+        <textarea name="content" placeholder="Content" rows="10" required></textarea>
+        <input type="text" name="author" placeholder="Author" required>
+        <button class="full-width" type="submit"><%= submit %></button>
+      </form>
+    <% } %>
+  </main>
+
+  <%- include("partials/footer") %>
+</body>
+</html>
