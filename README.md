@@ -35,3 +35,9 @@ blog-post/
 │        └── footer.ejs
 │── README.md           # documentation
 │── .gitignore
+
+![Home Dark Theme](./screenshots/Dark%20Theme%20home%20page.png)
+![New Post Dark Theme](./screenshots/Dark%20Theme%20New%20Post.png)
+![Blog Post Editing](./screenshots/Edit%20the%20Blog%20post.gif)
+![Home Page](./screenshots/Home%20Page.png)
+![New Post](./screenshots/NewPost.png)
